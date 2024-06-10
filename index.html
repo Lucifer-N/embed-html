@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic HTML File</title>
+    <!-- <script
+      async="false"
+      onload="runChatbotScriptAfterLoad()"
+      type="text/javascript"
+      src="http://localhost:3001/simplai.chatbot.js"
+    ></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <script type="text/javascript">
+      function loadScript(url, callback) {
+        const script = document.createElement("script");
+        script.type = "text/javascript";
+        if (script.readyState) {
+          // For IE < 9
+          script.onreadystatechange = function () {
+            if (
+              script.readyState === "loaded" ||
+              script.readyState === "complete"
+            ) {
+              script.onreadystatechange = null;
+              callback();
+            }
+          };
+        } else {
+          // For other browsers
+          script.onload = function () {
+            callback();
+          };
+        }
+        script.src = url;
+        document.getElementsByTagName("head")[0].appendChild(script);
+      }
+      // Usage:
+      loadScript(
+        "https://docs-preprod.simplai.ai/docs.simplai.js",
+        function () {
+          SimplAIDocs.init({
+            elementId: "my-tool-container-2",
+            TENANT_ID: 1,
+            agentId: "agent-6662b5b332adcd1a987b3f28",
+            // Other options...
+          });
+        },
+      );
+    </script>
+
+    <style>
+      html {
+        font-family: "DM Sans", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="my-tool-container-2" style="height: 20px; width: 20px"></div>
+    <h1>Hello, World!</h1>
+    <p>This is a basic HTML file.</p>
+  </body>
+</html>
